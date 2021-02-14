@@ -23,6 +23,7 @@ namespace TZ_Anuitex.Extensions
             return ListEmpl.Count();
         }
 
+
         public static void WriteEmployees<T>(this IEnumerable<T> ListEmpl) where T : Employee
         {
             foreach (var item in ListEmpl)
