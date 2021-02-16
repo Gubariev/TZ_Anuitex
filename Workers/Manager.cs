@@ -2,7 +2,7 @@
 
 namespace TZ_Anuitex.Workers
 {
-    class Manager : Employee
+    public class Manager : Employee
     {
         public Manager() : base()
         {

@@ -19,15 +19,25 @@ namespace TZ_Anuitex
             };
             var persone = new Manager("kolya", 21);
             Com += persone;
-            foreach (var item in Com.WorkersList)
+
+
+            Console.WriteLine("\nDoes this person '" + persone.Name + "' exists in EmployeeList? " + Com.WorkersList.IsExists(persone));
+
+            Console.WriteLine("\nNumber of exact employees");
+            Console.WriteLine(Com.WorkersList.GetNumbers<Manager>());//count of exact type of employees
+
+            Console.WriteLine("\nList of exact employees");
+            var TList = Com.WorkersList.GetEmployees<Manager>();// return a list of exact type of employees
+
+            foreach (var item in TList)
             {
                 Console.WriteLine(item.Name);
             }
 
-            Console.WriteLine(Com.WorkersList.IsExists(persone));
-            var c = Com.WorkersList.GetEmployees();
-            Console.WriteLine(c.GetNumbers());            
-            c.WriteEmployees();
+
+            Console.WriteLine("\nAll Employees ");
+            Com.WorkersList.CwEmployees();
+
         }
     }
 }

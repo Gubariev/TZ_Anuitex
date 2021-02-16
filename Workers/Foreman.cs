@@ -2,7 +2,7 @@
 
 namespace TZ_Anuitex.Workers
 {
-    class Foreman : Employee
+    public class Foreman : Employee
     {
         public Foreman() : base()
         {
